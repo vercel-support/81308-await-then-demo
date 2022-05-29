@@ -17,7 +17,7 @@ const getPassword = async () => {
 
 export default async function handler(req, res) {
   const password = await getPassword()
-  console.log({password})
+  // console.log({password})
 
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json({password})
 }
