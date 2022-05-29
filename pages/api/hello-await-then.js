@@ -11,6 +11,8 @@ const generatePassword = async (delay) => {
 
 const getPassword = async () => {
   return await generatePassword(5000).then(res => res.body)
+
+  return null
 }
 
 export default async function handler(req, res) {
