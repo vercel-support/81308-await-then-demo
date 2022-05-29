@@ -10,11 +10,11 @@ const generatePassword = async (delay) => {
 }
 
 const getPassword = async () => {
-  return await getPassword(5000).then(res => res.body)
+  return await generatePassword(5000).then(res => res.body)
 }
 
 export default async function handler(req, res) {
-  const password = getPassword()
+  const password = await getPassword()
   console.log({password})
 
   res.status(200).json({ name: 'John Doe' })
