@@ -4,7 +4,7 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   await sleep(5000).then(()=>{
     res.status(200).json({ name: 'John Doe' })
   })
