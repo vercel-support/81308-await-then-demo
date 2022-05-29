@@ -8,4 +8,5 @@ export default async function handler(req, res) {
   await sleep(5000).then(()=>{
     res.status(200).json({ name: 'John Doe' })
   })
+  res.status(200).json({ name: 'John Wick' })
 }
